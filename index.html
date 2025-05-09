@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelNotes Cornell</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>PixelNotes Cornell</h1>
+            <div class="controls-main">
+                <button id="theme-toggle-button">Toggle Theme</button>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <aside class="notes-sidebar">
+                <h2>My Notes</h2>
+                <div class="note-actions">
+                    <button id="new-note-button">New Note</button>
+                </div>
+                <ul id="notes-list">
+                    <!-- Notes will be listed here by JS -->
+                </ul>
+            </aside>
+
+            <main class="note-editor-container">
+                <div class="note-meta">
+                    <input type="text" id="note-title-input" placeholder="Note Title...">
+                    <div class="note-meta-actions">
+                        <button id="save-note-button">Save Note</button>
+                        <button id="delete-note-button" class="danger-button">Delete Note</button>
+                        <button id="export-md-button">Export as MD</button>
+                    </div>
+                </div>
+
+                <div class="cornell-layout">
+                    <div class="cues-pane">
+                        <h3>Cues / Questions</h3>
+                        <textarea id="cues-input" placeholder="Keywords, questions, main ideas..."></textarea>
+                    </div>
+                    <div class="main-notes-pane">
+                        <h3>Main Notes</h3>
+                        <textarea id="main-notes-input" placeholder="Detailed notes taken during lecture or reading..."></textarea>
+                    </div>
+                    <div class="summary-pane">
+                        <h3>Summary</h3>
+                        <textarea id="summary-input" placeholder="Summarize the key takeaways after your note-taking session..."></textarea>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer class="app-footer">
+            <p>All notes are saved locally in your browser.</p>
+            <p id="feedback-message" class="feedback-message"></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
